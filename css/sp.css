@@ -1,0 +1,70 @@
+.emblems-section > div {
+    padding: 0;
+}
+
+.emblem-title {
+    text-align: center;
+}
+
+#housing {
+    text-align: center;
+    grid-row-gap: 0.25rem; 
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2.75rem;
+}
+
+#housing .col-1 {
+    justify-content: flex-start;
+}
+
+.housing-options {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*  Lixeiras edits starts from here */
+.footer{
+    background-color: var(--primary-color);
+    border: none;
+    border-top: 1px solid var(--shadow-color);
+}
+
+.section {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 4px 1px var(--shadow-color);
+    border: none;
+}
+
+legend{
+    background-color: var(--secondary-color);
+    padding: 0.25rem 0.8rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    box-shadow: 0 0 4px 1px var(--shadow-color);
+}
+
+select, input, .small-input{
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.2rem;
+    border: 1px solid var(--shadow-color);
+    border-radius: 0.5rem;
+}
+
+.small-input{
+    border: 1px dashed var(--accent-color);
+}
+
+#stat-points, #skill-points{
+    background-color: #6c7cb9;
+}
+
+input:focus, select:focus{
+    outline: 1px solid rgb(128, 168, 255);
+    box-shadow: 0px 1px 4px 2px var(--shadow-color);
+}
+
+select, input{
+    text-align: center;
+}

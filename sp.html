@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Toram Tools Copy - Stat &amp; Skill Points Calculator</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/sp.css" />
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="home-link">
+            <img src="./media/images/logo.svg" alt="toramtools logo" class="toramtools-logo">
+        </a>
+        <h3>Copy</h3>
+        <div class="spacer"></div>
+    </nav>
+
+    <div class="container main">
+
+        <form id="base-sp" action='javascript:void(0);'>
+            <fieldset class="section">
+                <legend>
+                    <div>
+                        <span> Level, Stat &amp; Skill Points </span>
+                        <img class="question-mark" id="stat-popup">
+                    </div>
+                </legend>
+                <div class="grid grid-2">
+                    <div class="col-1">
+                        <label for="level">Lv</label>
+                        <input class="small-input" id="level" type="number" min="1" />
+                    </div>
+                    <div class="col-2">
+                        <label for="lvcap">MaxLv</label>
+                        <input class="small-input" id="lvcap" type="number" min="1" />
+                    </div>
+
+                    <div class="col-1">
+                        <label for="stat-points">Stat Points</label>
+                        <input class="small-input" id="stat-points" type="number" min="1" />
+                    </div>
+                    <div class="col-2">
+                        <label for="skill-points">Skill Points</label>
+                        <input class="small-input" id="skill-points" type="number" min="1" />
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+        <fieldset class="section emblems-section">
+            <legend class="section-title v-align">
+                <div>
+                    <span>Emblems</span>
+                    <img class="question-mark" id="emblem-popup">
+                </div>
+            </legend>
+            <div>
+                <form id="extra-sp" action='javascript:void(0);'>
+                    <h2 class="subsection-title">Player Level</h2>
+                    <div class="grid grid-1">
+                        <div class="col-1">
+                            <label for="highest-level">Highest Lv</label>
+                            <input class="small-input" type="number" id="highest-level" min="1" />
+                        </div>
+                    </div>
+
+                    <h2 class="subsection-title">Results</h2>
+                    <div class="grid grid-2">
+                        <div class="col-1">
+                            <label for="highest-level">Attacker</label>
+                            <select id="attacker-rank"></select>
+                        </div>
+                        <div class="col-2">
+                            <label for="highest-level">Tank</label>
+                            <select id="defender-rank"></select>
+                        </div>
+
+                        <div class="col-1">
+                            <label for="highest-level">Supporter</label>
+                            <select id="supporter-rank"></select>
+                        </div>
+                        <div class="col-2">
+                            <label for="highest-level">Assister</label>
+                            <select id="breaker-rank"></select>
+                        </div>
+                    </div>
+
+                    <h2 class="subsection-title">Learning Skills</h2>
+                    <div class="grid grid-2">
+                        <div class="col-1">
+                            <label for="mastered-skills">Mastered Skills</label>
+                            <select id="mastered-skills"></select>
+                        </div>
+                        <div class="col-2">
+                            <label for="mastered-trees">Mastered Trees</label>
+                            <select id="mastered-trees"></select>
+                        </div>
+                    </div>
+
+                    <h2 class="subsection-title">Consecutive Time Played</h2>
+                    <div class="grid grid-1">
+                        <div class="col-1">
+                            <label for="consecutive-time">Time</label>
+                            <select id="consecutive-time"></select>
+                        </div>
+                    </div>
+
+                    <h2 class="subsection-title">Other</h2>
+                    <div class="grid grid-2">
+                        <div class="col-1">
+                            <label for="first-aid">First Aid</label>
+                            <select id="first-aid"></select>
+                        </div>
+                        <div class="col-2">
+                            <label for="KO">Knocked Out</label>
+                            <select id="KO"></select>
+                        </div>
+                    </div>
+
+                    <h2 class="subsection-title">Mission</h2>
+                    <div class="grid grid-1" id="housing">
+                        <div class="col-1">
+                            <label for="max-chapter">Highest MQ Chapter Completed</label> 
+                        </div>
+                        <div class="col-1">
+                            <select id="max-chapter">
+                                <option value="0">None</option>
+                                <option value="0">Chapter 1</option>
+                                <option value="0">Chapter 2</option>
+                                <option value="0">Chapter 3</option>
+                                <option value="0">Chapter 4</option>
+                                <option value="0">Chapter 5</option>
+                                <option value="0">Chapter 6</option>
+                                <option value="1">Chapter 7</option>
+                                <option value="1">Chapter 8</option>
+                                <option value="1">Chapter 9</option>
+                                <option value="1">Chapter 10</option>
+                                <option value="2">Chapter 11</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <h2 class="subsection-title">Housing</h2>
+                    <div class="grid grid-2" id="housing">
+                        <div class="col-1">
+                            <label for="minigame-bk"><input type="checkbox" id="minigame-bk"> 20k Points on Black Knight Mini Game</label>
+                        </div>
+                        <div class="col-1">
+                            <label for="minigame-cg"><input type="checkbox" id="minigame-cg"> Won 10 Times on Card Game</label>
+                        </div>
+                        <div class="col-1">
+                            <label for="minigame-pr"><input type="checkbox" id="minigame-pr"> Set New Record on Each Track of Pet Racing</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </fieldset>
+    </div>
+    <div class="footer">
+        Based on ToramTools by: <a href="https://toramtools.github.io" target="_blank"> Insane23 </a>, Modified by: ToramSpoon
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/sp.js"></script>
+
+</html>

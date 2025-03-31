@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="blacksmith">
+
+<head>
+    <title>Toram Tools Copy - Experience Calculator</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/xp.css" />
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="home-link">
+            <img src="./media/images/logo.svg" alt="toramtools logo" class="toramtools-logo">
+        </a>
+        <h3>Copy</h3>
+        <div class="spacer"></div>
+    </nav>
+
+    <form class="container main">
+        <fieldset class="section">
+            <legend>Level</legend>
+            <div class="grid grid-3">
+                <div class="col-1">
+                    <label for="level">Lv</label>
+                    <input type="number" class="small-input" id="level" min="1" value="1" />
+                </div>
+                <div class="col-2">
+                    <label for="level-percentage">%</label>
+                    <input type="number" class="small-input" id="level-percentage" min="0" max="99" value="0" />
+                </div>
+                <div class="col-3">
+                    <label for="target-level">TargetLv</label>
+                    <input type="number" class="small-input" id="target-level" min="1" />
+                </div>
+            </div>
+            <div class="quest-info">
+                <p>
+                    <strong>Total XP required</strong>: <span id="xp-required"></span>
+                </p>
+            </div>
+        </fieldset>
+
+        <div class="radio-group">
+            <input type="radio" name="ui-select" id="mq-ui" data-selector="1" checked />
+            <label for="mq-ui">Main Quest</label>
+            <input type="radio" name="ui-select" id="npc-ui" data-selector="2" />
+            <label for="npc-ui">NPC Quest</label>
+        </div>
+
+        <fieldset id="npc-group" class="section npc-group ui-group" style="display: none;">
+            <legend class="v-align">
+                <div>
+                    <span>NPC Quest</span>
+                    <img id="quest-popup" class="question-mark" />
+                </div>
+            </legend>
+            <div class="grid grid-1 quest-block">
+                <div class="col-1">
+                    <label for="quest-name">Quest</label>
+                    <select id="quest-name"></select>
+                </div>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="col-1">
+                    <label for="quest-name">Exp</label>
+                    <input type="number" id="quest-exp" min="0" />
+                </div>
+                <div class="col-2">
+                    <label for="quest-times">N° of Times</label>
+                    <input type="number" id="quest-times" min="0" value="1" />
+                </div>
+            </div>
+
+            <div class="quest-info">
+                <p>
+                    Repeat this quest <strong><span id="target-times"></span> times</strong> to reach target level
+                </p>
+                <p>
+                    By doing this quest for <strong><span id="times-value"></span> times</strong>, you'll reach
+                    <strong>Level <span id="times-level"></span></strong>
+                </p>
+            </div>
+        </fieldset>
+
+        <fieldset id="mq-group" class="section mq-group ui-group">
+            <legend>Main Quest</legend>
+            <div class="grid grid-1 nogap mq-block">
+                <div class="col-1 grid grid-1 nogap">
+                    <label class="col-1 text-center" for="mq-from">From</label>
+                    <select class="col-1" id="mq-from"></select>
+                </div>
+
+                <div class="col-1 grid grid-1 nogap">
+                    <label class="col-1 text-center" for="mq-until">Until</label>
+                    <select class="col-1" id="mq-until"></select>
+                </div>
+
+                <div class="col-1 grid grid-1 nogap">
+                    <label class="col-1 text-center" for="skip-venena" id="skip-venena-label"><input type="checkbox" id="skip-venena" checked><span>Skip Pre-Venena Metacoenubia Fight</span></label>
+                </div>
+
+                <div class="col-1 grid grid-1 nogap" style="padding-top: 0;">
+                    <label class="col-1 text-center" for="multiple-mq" id="multiple-mq-label"><input type="checkbox" id="multiple-mq"><span>Spam Adventurer's Diaries</span></label>
+                </div>
+
+                <div class="col-1 quest-info">
+                    <p id="mq-xp"></p>
+                    <p id="mq-eval"></p>
+                    <p id="mq-startFrom"></p>
+                    <p id="mq-or">OR</p>
+                    <p id="mq-stopAt"></p>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset id="mq-table" class="section hidden">
+            <legend>Result</legend>
+            <div id="mq-table-results">
+                <div class="col-1 grid nogap" id="mq-table-header">
+                    <div>N°</div>
+                    <div style="text-align: left;">Final Chapter</div>
+                    <div>Lv (%)</div>
+                </div>
+                <div class="col-1 grid nogap" id="mq-table-row">
+                    <div>1</div>
+                    <div style="text-align: left;">A chapter</div>
+                    <div>255 (99%)</div>
+                </div>
+                <div class="col-1 grid nogap" id="mq-table-row">
+                    <div>2</div>
+                    <div style="text-align: left;">A chapter</div>
+                    <div>300 (99%)</div>
+                </div>
+                <div class="col-1 grid nogap" id="mq-table-row">
+                    <div>3</div>
+                    <div style="text-align: left;">A chapter</div>
+                    <div>350 (99%)</div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <div class="floating-img-container">
+        <img class="floating-img" src="./media/images/potum200.webp" alt="pom-logo">
+    </div>
+    <div class="footer">
+        Based on ToramTools by: <a href="https://toramtools.github.io" target="_blank"> Insane23 </a>, Modified by: ToramSpoon
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/xp.js"></script>
+
+</html>

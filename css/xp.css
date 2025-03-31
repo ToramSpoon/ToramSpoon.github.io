@@ -1,0 +1,146 @@
+#quest-name {
+    padding-right: 0.5rem;
+}
+
+#quest-exp, #quest-times {
+    width: 4rem;
+}
+
+.quest-info {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.quest-info > p {
+    margin: 0;
+    margin-bottom: 0.25rem;
+}
+
+.quest-info > p:last-child {
+    margin-bottom: 0;
+}
+
+.mq-block {
+    padding: 0;
+}
+
+#mq-stopAt {
+    color: green;
+}
+
+#mq-startFrom {
+    color: red;
+}
+
+#skip-venena-label > span {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+#skip-venena-label {
+    display: flex;
+    align-items: center;
+}
+
+#multiple-mq-label > span {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+#multiple-mq-label {
+    display: flex;
+    align-items: center;
+}
+
+#mq-table-header {
+    font-weight: bold;
+    font-size: 0.8em;
+    grid-template-columns: 10% 70% 20%;
+    padding: 0;
+}
+
+#mq-table-row {
+    font-size: 0.8em;
+    grid-template-columns: 10% 70% 20%;
+    padding: 0;
+}
+
+#mq-table-header > div, #mq-table-row > div {
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+#mq-table-header > div:not(:first-child), #mq-table-row > div:not(:first-child)  {
+    border-left: 1px solid black;
+}
+
+#mq-table-header:not(:last-child) > div, #mq-table-row:not(:last-child) > div {
+    border-bottom: 1px solid black;
+}
+
+#mq-or {
+    font-weight: bold;
+    display: none;
+}
+
+/*  Lixeiras edits starts from here */
+.footer{
+    background-color: var(--primary-color);
+    border: none;
+    border-top: 1px solid var(--shadow-color);
+}
+
+#mq-group, .section {
+    background-color: var(--primary-color);
+    border: 1px solid var(--accent-color);
+}
+
+legend{
+    background-color: var(--secondary-color);
+    padding: 0.25rem 0.8rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 2rem;
+    font-weight: 500;
+}
+
+select, input, .grid-3 input{
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.3rem;
+    border: 1px solid hsl(0, 0%, 30%);
+    border-radius: 0.6rem;
+}
+
+input:focus, select:focus, .grid-3 input:focus{
+    outline: 1px solid rgb(128, 168, 255);
+}
+
+select{
+border-radius: 6px;
+text-align: center;
+}
+
+input{
+    text-align: center; 
+}
+
+.floating-img-container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.floating-img{
+    height: 10rem;
+}
+
+#mq-startFrom{
+    color: #ff4e4e;
+}
+
+#mq-stopAt{
+    color: #5ecc5e;
+}
