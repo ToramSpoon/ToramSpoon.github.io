@@ -1,4 +1,4 @@
-/* Main end: 412x692 viewport */
+/* Viewport Reference: 360x740 (Samsung 8+) & 1366 x 1080 (Desktop) */
 
 @import url(font.css);
 
@@ -9,29 +9,22 @@
     --text-color: #dbdbdb;
     --accent-color: #6c7cb9;
     --shadow-color: rgba(0, 0, 0, 0.15);
-    
     --highlight-color: #5ecc5e;
     --error-color: #ff4e4e;
-    --weapon-crysta: red;
-    --normal-crysta: blue;
-    --special-crysta: #7A0B83;
-    --additional-crysta: #9C9801;
-    --armor-crysta: #058142;
-    --enhancer-crysta: #444444;
+}
+
+html {
+    font-size: 16px;
+    font-family: Noto Sans;
+    width: 100%;
+    height: 100%;
 }
 
 *{
     font-family: inherit;
 }
 
-html {
-    font-size: 16px;
-    width: 100%;
-    height: 100%;
-}
-
 body {
-    font-family: Noto Sans;
     background-color: var(--bg-color);
     color: var(--text-color);
     min-height: 100%;
@@ -45,67 +38,37 @@ body {
 }
 
 nav {
-    height: 54px + 2rem;
-    padding-left: 8px;
+    height: 4rem;
+    padding-left: 10px;
     background-color: var(--primary-color);
     border-bottom: 1px solid var(--shadow-color);
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-nav a {
-    height: 100%;
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--text-color);
+    justify-content: space-between;
 }
 
 .spacer{
-    padding: 0;
+    display: flex;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
-nav .spacer {
-    margin-right: auto;
-}
-
-nav svg {
-    fill: var(--text-color);
-}
-
-.toramtools-logo{
-    height: 1.5rem;
+.toramspoon-logo{
+    height: 2.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-right: 0.5em;
 }
 
 @media(max-width: 720px) {
-    nav a {
-        box-sizing: border-box;
-        height: auto;
-        width: 100%;
-        padding: 20px 30px;
-        justify-content: flex-start;
+    .spacer h3{
+        display:flex;
+        font-size: 0.8em;
+        align-items: center;
     }
 }
 
 select {
     padding-right: 0.5rem;
-}
-
-.header-title {
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0.25rem 0;
-}
-
-.header {
-    border: 1px solid #333333;
-    box-sizing: border-box;
-    text-align: center;
-    background-color: #333333;
-    color: white;
-    margin-bottom: 0.5rem;
 }
 
 .main {
@@ -118,15 +81,13 @@ select {
 }
 
 .footer {
-    border: 1px solid #333333;
+    border: var(--shadow-color);
     box-sizing: border-box;
     text-align: center;
     font-size: 1rem;
-    background-color: #333333;
+    background-color: var(--bg-color);
     color: white;
     font-style: italic;
-    margin-top: 5px;
-    padding: 0.25rem 0;
     font-weight: bold;
 }
 
@@ -327,4 +288,14 @@ input[type=checkbox] {
 
 .h-align-center {
     text-align: center;
+}
+
+.container {
+    padding-block: 2em 2em;
+}
+
+fieldset {
+    width: 100%;
+    padding-inline: 0.5em 0.5em;
+    margin-inline: 0.5em 0.5em;
 }

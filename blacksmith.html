@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Toram Tools Copy - Blacksmith Crafting Calculator</title>
+    <title>Toram Spoon - Blacksmith Crafting Calculator</title>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
     <link rel="stylesheet" href="css/main.css" />
@@ -12,10 +12,11 @@
 <body>
     <nav>
         <a href="index.html" class="home-link">
-            <img src="./media/images/logo.svg" alt="toramtools logo" class="toramtools-logo">
+            <img src="./media/images/logo.svg" alt="toramspoon logo" class="toramspoon-logo">
         </a>
-        <h3>Copy</h3>
-        <div class="spacer"></div>
+        <div class="spacer">
+            <h3> Spoonfeeding Toram Players </h3>
+        </div>
     </nav>
 
     <form class="container main">
@@ -58,7 +59,7 @@
                     <input class="small-input" id="eSTR" type="number" min="0" />
                 </div>
                 <div class="col-2">
-                    <label for="eSTR%">STR%</label>
+                    <label for="eSTRp">STR%</label>
                     <input class="small-input" id="eSTRp" type="number" min="0" />
                 </div>
 
@@ -67,7 +68,7 @@
                     <input class="small-input" id="eDEX" type="number" min="0" />
                 </div>
                 <div class="col-2">
-                    <label for="eDEX%">DEX%</label>
+                    <label for="eDEXp">DEX%</label>
                     <input class="small-input" id="eDEXp" type="number" min="0" />
                 </div>
             </div>
@@ -100,7 +101,6 @@
                 <input class="small-input col-1" id="create-equipment" type="number" min="0" value="10" />
                 <input class="small-input col-2" id="careful-creation" type="number" min="0" value="10" />
                 <input class="small-input col-3" id="expert-creation" type="number" min="0" value="10" />
-                <div></div>
             </div>
         </fieldset>
 
@@ -154,7 +154,7 @@
     </form>
 
     <div class="footer">
-        Based on ToramTools by: <a href="https://toramtools.github.io" target="_blank"> Insane23 </a>, Modified by: ToramSpoon
+        Developed by ToramSpoon based on <a class="credits" href="https://toramtools.github.io" target="_blank">ToramTools</a>.
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Toram Tools Copy - Crafting Recipe</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/craftingrecipe.css" />
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="home-link">
+            <img src="./media/images/logo.svg" alt="toramtools logo" class="toramtools-logo">
+        </a>
+        <h3>Copy</h3>
+        <div class="spacer"></div>
+    </nav>
+
+    <form class="container main">
+        <fieldset class="section">
+            <label for="craft_type">Craft Type</label><select id="craft_type"></select>
+            <label for="item_type">Item Type</label><select id="item_type"></select>
+            <label for="item_name">Item Name</label><select id="item_name"></select>
+        </fieldset>
+
+        <fieldset class="section">
+            <div id="item_info"></div>
+        </fieldset>
+    </form>
+
+    <div class="footer">
+        Written and Assembled by: ToramSpoon
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/craftingrecipe.js"></script>
+
+</html>

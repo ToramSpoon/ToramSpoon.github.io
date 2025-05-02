@@ -1,11 +1,3 @@
-#quest-name {
-    padding-right: 0.5rem;
-}
-
-#quest-exp, #quest-times {
-    width: 4rem;
-}
-
 .quest-info {
     text-align: center;
     margin: 0 auto;
@@ -22,6 +14,31 @@
 
 .mq-block {
     padding: 0;
+}
+
+.footer{
+    background-color: var(--primary-color);
+    border: none;
+    border-top: 1px solid var(--shadow-color);
+}
+
+.floating-img-container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.floating-img{
+    height: 10rem;
+}
+
+#quest-name {
+    padding-right: 0.5rem;
+}
+
+#quest-exp, #quest-times {
+    width: 4rem;
 }
 
 #mq-stopAt {
@@ -85,16 +102,17 @@
     display: none;
 }
 
-/*  Lixeiras edits starts from here */
-.footer{
-    background-color: var(--primary-color);
-    border: none;
-    border-top: 1px solid var(--shadow-color);
-}
-
 #mq-group, .section {
     background-color: var(--primary-color);
     border: 1px solid var(--accent-color);
+}
+
+#mq-startFrom{
+    color: #ff4e4e;
+}
+
+#mq-stopAt{
+    color: #5ecc5e;
 }
 
 legend{
@@ -124,23 +142,4 @@ text-align: center;
 
 input{
     text-align: center; 
-}
-
-.floating-img-container{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.floating-img{
-    height: 10rem;
-}
-
-#mq-startFrom{
-    color: #ff4e4e;
-}
-
-#mq-stopAt{
-    color: #5ecc5e;
 }
