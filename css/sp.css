@@ -23,7 +23,6 @@
     padding-bottom: 0;
 }
 
-/*  Lixeiras edits starts from here */
 .footer{
     background-color: var(--primary-color);
     border: none;
@@ -50,10 +49,6 @@ select, input, .small-input{
     padding: 0.2rem;
     border: 1px solid var(--shadow-color);
     border-radius: 0.5rem;
-}
-
-.small-input{
-    border: 1px dashed var(--accent-color);
 }
 
 #stat-points, #skill-points{
